@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Option from "./Option";
+import url from '../../../urlConfig.js'
 
 class BuyingOptions extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class BuyingOptions extends React.Component {
   getColorOptions() {
     axios
       .get(
-        `http://ec2-18-220-184-68.us-east-2.compute.amazonaws.com/api/products/${
+        `${url.url}${
           this.props.id
         }/colors`
       )

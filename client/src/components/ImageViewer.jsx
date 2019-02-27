@@ -2,6 +2,7 @@ import React from "react";
 import ImageButton from "./ImageButton";
 import styles from "./imageviewer.scss";
 import ReactImageMagnify from "react-image-magnify";
+import url from '../../../urlConfig.js'
 
 class ImageViewer extends React.Component {
   constructor(props) {

@@ -5,6 +5,7 @@ import axios from "axios";
 import ImageViewer from "./components/ImageViewer";
 import Summary from "./components/Summary";
 import styles from "./global.scss";
+import url from '../../../urlConfig.js'
 
 class ProductDetails extends React.Component {
   constructor(props) {
@@ -26,7 +27,7 @@ class ProductDetails extends React.Component {
   getProductInformation() {
     axios
       .get(
-        `http://ec2-18-220-184-68.us-east-2.compute.amazonaws.com/api/products/${this
+        `${url.url}${this
           .state.productId || 6}/`
         // `api/products/${this.state.productId}/`
       )
