@@ -11,6 +11,8 @@ module.exports = {
         res.sendStatus(501);
       } else {
         let productDetails = data[0];
+        console.log(data, ' - data');
+        console.log('this is the productDetails', productDetails);
         productDetails["primary_images"] = [];
 
         data.forEach(row => {

@@ -5,7 +5,7 @@ import axios from "axios";
 import ImageViewer from "./components/ImageViewer";
 import Summary from "./components/Summary";
 import styles from "./global.scss";
-import url from '../../../urlConfig.js'
+import url from '../../urlConfig.js';
 
 class ProductDetails extends React.Component {
   constructor(props) {
@@ -32,6 +32,8 @@ class ProductDetails extends React.Component {
         // `api/products/${this.state.productId}/`
       )
       .then(({ data }) => {
+        console.log('Made data request');
+        console.log(data, ' - data')
         this.setState({
           product: data,
           images: data.primary_images,
@@ -81,7 +83,7 @@ class ProductDetails extends React.Component {
           <Summary product={this.state.product} swapImage={this.swapSubImage} />
         </div>
       );
-    } else return <div />;
+    } else return (<div className="no-content">No content to show right now! </div>);
   }
 }
 
