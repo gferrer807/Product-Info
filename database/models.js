@@ -51,7 +51,7 @@ const {Pool} = require('pg');
 
 //DB configuration
 var pool = new Pool ({
-  host: 'localhost',
+  host: 'ec2-3-18-35-125.us-east-2.compute.amazonaws.com',
   user: 'postgres',
   password: 'Blunderb33!',
   database: 'amazon_component'
