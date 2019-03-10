@@ -10,13 +10,14 @@ module.exports = {
         console.log(err);
         res.sendStatus(501);
       } else {
-        let productDetails = data[0];
-        console.log(data, ' - data');
+        let productDetails = data[0]; //
+        console.log(data[0], ' - data being retrieved');
         console.log('this is the productDetails', productDetails);
         productDetails["primary_images"] = [];
 
         data.forEach(row => {
-          productDetails["primary_images"].push(row["imgUrl"]);
+          console.log('one of the data rows - ', row);
+          productDetails["primary_images"].push(row["imgurl"]);
         });
         res.send(productDetails);
       }
