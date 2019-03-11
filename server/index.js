@@ -29,6 +29,10 @@ app.get("/", (req, res) => {
   res.send("hello");
 });
 
+app.get("/loaderio-*", (req, res) => {
+  res.sendfile(path.join(__dirname, '../loaderio-98606eb4ce3e97cca7906967ca9fac7f.txt'));
+});
+
 app.get("/bundle", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/bundle"));
 });
