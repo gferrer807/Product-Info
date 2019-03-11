@@ -10,7 +10,8 @@
     "dev": "webpack-dev-server",
     "test": "jest",
     "build": "webpack",
-    "prod": "webpack -p --mode production"
+    "prod": "webpack -p --mode production",
+    "start": "node server/index.js"
   },
   "dependencies": {
     "axios": "^0.18.0",

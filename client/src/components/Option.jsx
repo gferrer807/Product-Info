@@ -11,12 +11,12 @@ class Option extends React.Component {
   }
 
   //swapImage and Change Option
-  swapImage(flag, imgUrl, value) {
+  swapImage(flag, imgurl, value) {
     flag
       ? this.setState({ selected: value })
       : this.setState({ selected: null });
 
-    this.props.swapImage(flag, imgUrl, value);
+    this.props.swapImage(flag, imgurl, value);
   }
 
   renderSelect() {
@@ -47,7 +47,7 @@ class Option extends React.Component {
             return (
               <ImageButton
                 handleHover={this.swapImage}
-                image={option.imgUrl}
+                image={option.imgurl}
                 value={value}
                 key={index}
               />

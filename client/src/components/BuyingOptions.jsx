@@ -17,11 +17,12 @@ class BuyingOptions extends React.Component {
   getColorOptions() {
     axios
       .get(
-        `${url.url}${
+        `http://localhost:3000/api/products/${
           this.props.id
         }/colors`
       )
       .then(({ data }) => {
+        console.log(data, ' - color data')
         data.length > 0 ? this.setState({ colorOptions: data }) : "";
       })
       .catch(err => {
@@ -33,12 +34,12 @@ class BuyingOptions extends React.Component {
     console.log(id);
     axios
       .get(
-        `http://ec2-18-220-184-68.us-east-2.compute.amazonaws.com/api/products/${
+        `http://localhost:3000/api/products/${
           this.props.id
         }/size`
       )
       .then(({ data }) => {
-        console.log(data);
+        console.log(data, ' - size data');
         data.length > 0 ? this.setState({ sizeOptions: data }) : "";
       })
       .catch(err => {
