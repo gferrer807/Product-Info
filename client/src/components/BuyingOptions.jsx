@@ -17,7 +17,7 @@ class BuyingOptions extends React.Component {
   getColorOptions() {
     axios
       .get(
-        `http://localhost:3000/api/products/${
+        `${url.url}${
           this.props.id
         }/colors`
       )
@@ -34,7 +34,7 @@ class BuyingOptions extends React.Component {
     console.log(id);
     axios
       .get(
-        `http://localhost:3000/api/products/${
+        `${url.url}${
           this.props.id
         }/size`
       )
