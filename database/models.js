@@ -51,7 +51,7 @@ const {Pool} = require('pg');
 
 //DB configuration
 var pool = new Pool ({
-  host: 'localhost',
+  host: 'ec2-3-18-35-125.us-east-2.compute.amazonaws.com',
   user: 'postgres',
   password: 'Blunderb33!',
   database: 'amazon_component'
@@ -75,7 +75,7 @@ module.exports = {
 
   getColorOptions: (id, callback) => {
     pool.query(`SELECT DISTINCT var_name, imgurl FROM variations v
-          WHERE v.id_options = (SELECT id FROM options o 
+            WHERE v.id_options = (SELECT id FROM options o 
             where o.id_products = ${id} AND o.option_name = 'color')`, (err, res) => {
       if (err) {
         callback(err);
