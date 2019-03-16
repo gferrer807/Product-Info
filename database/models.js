@@ -14,7 +14,6 @@ module.exports = {
           INNER JOIN primary_images pi on p.id = pi.id_products
           WHERE p.id = ${id}`, (err, res) => {
       if (err) {
-        console.log(err, ' -err');
         callback(err);
       } else {
         callback(null, res.rows);
