@@ -48,5 +48,11 @@ module.exports = {
   },
   devtool: "inline-sourcemap",
   target: "web",
+  devServer: {
+    proxy: { "/api": "http://localhost:3000" },
+    port: process.env.PORT || PORT,
+    compress: true,
+    contentBase: path.join(__dirname, "./public")
+  },
   plugins: [new CompressionPlugin()]
 };
