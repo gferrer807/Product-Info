@@ -17,7 +17,6 @@ module.exports = {
         console.log(err, ' -err');
         callback(err);
       } else {
-        console.log(res, ' -res');
         callback(null, res.rows);
         //console.log('here is the res', res.rows[0]);
       }
@@ -31,7 +30,6 @@ module.exports = {
       if (err) {
         callback(err);
       } else {
-        console.log(res, ' -res');
         callback(null, res.rows);
         //console.log('here is the res', res.rows[0]);
       }
