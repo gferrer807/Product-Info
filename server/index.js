@@ -54,7 +54,7 @@ if (cluster.isMaster) {
   });
 
   app.get("/loaderio-*", (req, res) => {
-    res.sendfile(path.join(__dirname, '../loaderio-98606eb4ce3e97cca7906967ca9fac7f.txt'));
+    res.sendfile(path.join(__dirname, '../loaderio-17f4937b96b1fd34ce1ecfd1ae4a3906.txt'));
   });
 
   app.get("/bundle", (req, res) => {
