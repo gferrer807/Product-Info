@@ -1,3 +1,3 @@
 module.exports = {
-  url: 'localhost:3000/api/products/'
+  url: 'http:/ec2-3-17-241-227.us-east-2.compute.amazonaws.com/api/products/'
 };
