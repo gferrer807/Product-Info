@@ -71,6 +71,10 @@ if (cluster.isMaster) {
     console.log(`Listening on ${port}`);
   });
 
+  app.get('/:id', (req, res) => {
+    res.sendFile(path.join(__dirname + '/../public/index.html'));
+  });
+
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });

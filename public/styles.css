@@ -1,0 +1,23 @@
+body {
+  flex-flow: row wrap;
+  overflow-x: hidden;
+}
+.main-product-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20vh;
+}
+
+#recs {
+  display: flex;
+  flex-flow: wrap;
+  width: 1350px;
+}
+
+#banner {
+  display: block;
+  width: 1386px;
+  height: 13rem;
+  background: url("https://s3.us-east-2.amazonaws.com/sjm-pokemon/amazonbanner.png");
+  background-size: 100% auto;
+}
